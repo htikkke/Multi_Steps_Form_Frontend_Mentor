@@ -13,3 +13,23 @@
   --color-custom-blue-50: hsl(231, 100%, 99%);
   --color-custom-white: hsl(0, 100%, 100%);
 }
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
