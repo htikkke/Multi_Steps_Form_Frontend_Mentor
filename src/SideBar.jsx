@@ -1,7 +1,7 @@
 export default function SideBar() {
   return (
     <div className="bg-[url(/assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl">
-      {/* Option-1 */}
+      {/* Step-1 */}
       <div className="flex gap-5 items-center">
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           1
@@ -15,7 +15,7 @@ export default function SideBar() {
           </p>
         </div>
       </div>
-      {/* Option-2 */}
+      {/* Step-2 */}
       <div className="flex gap-5 items-center">
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           2
@@ -29,7 +29,7 @@ export default function SideBar() {
           </p>
         </div>
       </div>
-      {/* Option-3 */}
+      {/* Step-3 */}
       <div className="flex gap-5 items-center">
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           3
@@ -43,7 +43,7 @@ export default function SideBar() {
           </p>
         </div>
       </div>
-      {/* Option-4 */}
+      {/* Step-4 */}
       <div className="flex gap-5 items-center">
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           4

@@ -1,12 +1,14 @@
 import SideBar from "./SideBar";
+import PersonalInfo from "./PersonalInfo";
 
 export default function App() {
   return (
     <div
       id="main-container"
-      className="w-full max-w-3xl bg-custom-white rounded-2xl shadow-2xl p-6 flex"
+      className="w-full max-w-3xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
     >
       <SideBar />
+      <PersonalInfo />
     </div>
   );
 }
