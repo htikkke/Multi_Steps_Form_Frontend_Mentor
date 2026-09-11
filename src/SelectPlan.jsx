@@ -48,6 +48,16 @@ export default function SelectPlan() {
       {/* month-year-toggle-button */}
       <div className="flex gap-6 p-2 items-center justify-center bg-slate-50 rounded-lg">
         <p className="text-custom-grey-500 font-bold text-sm">Monthly</p>
+        {/* toggle-button */}
+        <button
+          type="button"
+          className="w-10 h-5 flex items-center bg-custom-blue-950 rounded-full p-1 cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-custom-blue-950/50"
+        >
+          {/* white-handle */}
+          <div
+            className={`bg-white w-3 h-3 rounded-full shadow-md transform transition-transform duration-200 ease-in-out`}
+          ></div>
+        </button>
         <p className="text-custom-grey-500 font-bold text-sm">Yearly</p>
       </div>
       {/* Back-Next-button */}
