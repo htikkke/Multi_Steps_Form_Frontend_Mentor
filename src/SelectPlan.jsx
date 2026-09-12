@@ -24,7 +24,14 @@ export default function SelectPlan() {
           />
           <div className="flex flex-col">
             <p className="font-bold text-[15px] text-custom-blue-950">Arcade</p>
-            <p className="font-normal text-xs text-custom-grey-500">$9/mo</p>
+            <p className="font-normal text-xs text-custom-grey-500">
+              {isYearly ? "$90/yr" : "$9/mo"}
+            </p>
+            {isYearly && (
+              <p className="font-normal text-[11px] text-custom-blue-950 transition-all duration-200">
+                2 months free
+              </p>
+            )}
           </div>
         </div>
         {/* Advanced */}
@@ -37,7 +44,14 @@ export default function SelectPlan() {
             <p className="font-bold text-[15px] text-custom-blue-950">
               Advanced
             </p>
-            <p className="font-normal text-xs text-custom-grey-500">$12/mo</p>
+            <p className="font-normal text-xs text-custom-grey-500">
+              {isYearly ? "$120/yr" : "$12/mo"}
+            </p>
+            {isYearly && (
+              <p className="font-normal text-[11px] text-custom-blue-950 transition-all duration-200">
+                2 months free
+              </p>
+            )}
           </div>
         </div>
         {/* Pro */}
@@ -45,7 +59,14 @@ export default function SelectPlan() {
           <img src="/public/assets/images/icon-pro.svg" className="w-8 h-8" />
           <div className="flex flex-col">
             <p className="font-bold text-[15px] text-custom-blue-950">Pro</p>
-            <p className="font-normal text-xs text-custom-grey-500">$15/mo</p>
+            <p className="font-normal text-xs text-custom-grey-500">
+              {isYearly ? "$150/yr" : "$15/mo"}
+            </p>
+            {isYearly && (
+              <p className="font-normal text-[11px] text-custom-blue-950 transition-all duration-200">
+                2 months free
+              </p>
+            )}
           </div>
         </div>
       </div>
