@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { FormContext } from "./App";
+
 export default function SelectPlan() {
+  const { isYearly, setIsYearly } = useContext(FormContext);
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Select-Plan-Header */}
@@ -50,12 +54,13 @@ export default function SelectPlan() {
         <p className="text-custom-grey-500 font-bold text-sm">Monthly</p>
         {/* toggle-button */}
         <button
+          onClick={() => setIsYearly(!isYearly)}
           type="button"
           className="w-10 h-5 flex items-center bg-custom-blue-950 rounded-full p-1 cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-custom-blue-950/50"
         >
           {/* white-handle */}
           <div
-            className={`bg-white w-3 h-3 rounded-full shadow-md transform transition-transform duration-200 ease-in-out`}
+            className={`bg-white w-3 h-3 rounded-full shadow-md transform transition-transform duration-200 ease-in-out ${isYearly ? "translate-x-5" : "translate-x-0"}`}
           ></div>
         </button>
         <p className="text-custom-grey-500 font-bold text-sm">Yearly</p>
