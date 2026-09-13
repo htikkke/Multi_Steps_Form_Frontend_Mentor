@@ -17,7 +17,7 @@ export default function SelectPlan() {
       {/* Select-Plan-Options */}
       <div className="flex gap-5">
         {/* Arcade */}
-        <div className="w-26 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
+        <div className="w-26 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
           <img
             src="/public/assets/images/icon-arcade.svg"
             className="w-8 h-8"
@@ -35,7 +35,7 @@ export default function SelectPlan() {
           </div>
         </div>
         {/* Advanced */}
-        <div className="w-26 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
+        <div className="w-26 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
           <img
             src="/public/assets/images/icon-advanced.svg"
             className="w-8 h-8"
@@ -55,7 +55,7 @@ export default function SelectPlan() {
           </div>
         </div>
         {/* Pro */}
-        <div className="w-26 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
+        <div className="w-26 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
           <img src="/public/assets/images/icon-pro.svg" className="w-8 h-8" />
           <div className="flex flex-col">
             <p className="font-bold text-[15px] text-custom-blue-950">Pro</p>
