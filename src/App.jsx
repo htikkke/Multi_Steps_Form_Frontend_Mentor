@@ -2,6 +2,7 @@ import { useState, createContext } from "react";
 import SideBar from "./SideBar";
 import PersonalInfo from "./PersonalInfo";
 import SelectPlan from "./SelectPlan";
+import AddOn from "./AddOn";
 
 export const FormContext = createContext();
 
@@ -15,7 +16,7 @@ export default function App() {
         className="w-full max-w-3xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
       >
         <SideBar />
-        <SelectPlan />
+        <AddOn />
       </div>
     </FormContext.Provider>
   );

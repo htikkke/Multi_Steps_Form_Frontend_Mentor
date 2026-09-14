@@ -7,7 +7,6 @@ export default function PersonalInfo() {
           Personal Info
         </h1>
         <p className="font-normal text-custom-grey-500 text-xs">
-          {" "}
           Please provide your name, email address, and phone number.
         </p>
       </div>
