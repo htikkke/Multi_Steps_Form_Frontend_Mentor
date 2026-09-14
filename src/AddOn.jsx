@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { FormContext } from "./App";
+
 export default function AddOn() {
+  const { isYearly } = useContext(FormContext);
+
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Add-On-header */}
@@ -28,7 +33,9 @@ export default function AddOn() {
               </p>
             </div>
           </div>
-          <p className="text-xs font-normal text-custom-purple-600">+$1/mo</p>
+          <p className="text-xs font-normal text-custom-purple-600">
+            {isYearly ? "+$10/yr" : "+$1/mo"}
+          </p>
         </div>
         <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
           <div className="flex gap-5 items-center">
@@ -46,7 +53,9 @@ export default function AddOn() {
               </p>
             </div>
           </div>
-          <p className="text-xs font-normal text-custom-purple-600">+$2/mo</p>
+          <p className="text-xs font-normal text-custom-purple-600">
+            {isYearly ? "+$20/yr" : "+$2/mo"}
+          </p>
         </div>
         <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
           <div className="flex gap-5 items-center">
@@ -64,7 +73,9 @@ export default function AddOn() {
               </p>
             </div>
           </div>
-          <p className="text-xs font-normal text-custom-purple-600">+$2/mo</p>
+          <p className="text-xs font-normal text-custom-purple-600">
+            {isYearly ? "+$20/yr" : "+$2/mo"}
+          </p>
         </div>
       </div>
       {/* Back-Next-Buttons */}
