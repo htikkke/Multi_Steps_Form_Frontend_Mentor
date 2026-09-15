@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FormContext } from "./App";
 
-export default function AddOnCard(title, text, monthlyPrice, yearlyPrice) {
+export default function AddOnCard({ title, text, monthlyPrice, yearlyPrice }) {
   const { isYearly } = useContext(FormContext);
   return (
     <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">

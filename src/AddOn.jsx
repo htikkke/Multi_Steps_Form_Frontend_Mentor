@@ -1,9 +1,30 @@
-import { useContext } from "react";
-import { FormContext } from "./App";
+import AddOnCard from "./AddOnCard";
+
+const ADDONS = [
+  {
+    id: "Online service",
+    title: "Online service",
+    text: "Access to multiplayer games",
+    monthlyPrice: "+$1/mo",
+    yearlyPrice: "+$10/yr",
+  },
+  {
+    id: "Large storage",
+    title: "Larger storage",
+    text: "Extra 1TB of cloud save",
+    monthlyPrice: "+$2/mo",
+    yearlyPrice: "+$20/yr",
+  },
+  {
+    id: "Customizable Profile",
+    title: "Customizable Profile",
+    text: "Custom theme on your profile",
+    monthlyPrice: "+$2/mo",
+    yearlyPrice: "+$20/yr",
+  },
+];
 
 export default function AddOn() {
-  const { isYearly } = useContext(FormContext);
-
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Add-On-header */}
@@ -17,46 +38,15 @@ export default function AddOn() {
       </div>
       {/* Add-On-Options */}
       <div className="flex flex-col gap-3">
-        <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
-          <div className="flex gap-5 items-center">
-            <input
-              type="checkbox"
-              name="add-on-options"
-              className="w-4 h-4 accent-custom-purple-600 cursor-pointer"
-            />
-            <div>
-              <p className="text-sm font-bold text-custom-blue-950">
-                Larger storage
-              </p>
-              <p className="text-xs font-normal text-custom-grey-500">
-                Extra 1TB of cloud save
-              </p>
-            </div>
-          </div>
-          <p className="text-xs font-normal text-custom-purple-600">
-            {isYearly ? "+$20/yr" : "+$2/mo"}
-          </p>
-        </div>
-        <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
-          <div className="flex gap-5 items-center">
-            <input
-              type="checkbox"
-              name="add-on-options"
-              className="w-4 h-4 accent-custom-purple-600 cursor-pointer"
-            />
-            <div>
-              <p className="text-sm font-bold text-custom-blue-950">
-                Customizable Profile
-              </p>
-              <p className="text-xs font-normal text-custom-grey-500">
-                Custom theme on your profile
-              </p>
-            </div>
-          </div>
-          <p className="text-xs font-normal text-custom-purple-600">
-            {isYearly ? "+$20/yr" : "+$2/mo"}
-          </p>
-        </div>
+        {ADDONS.map((ADDON) => (
+          <AddOnCard
+            id={ADDON.id}
+            title={ADDON.title}
+            text={ADDON.text}
+            monthlyPrice={ADDON.monthlyPrice}
+            yearlyPrice={ADDON.yearlyPrice}
+          />
+        ))}
       </div>
       {/* Back-Next-Buttons */}
       <div className="flex justify-between mt-30">
