@@ -26,26 +26,6 @@ export default function AddOn() {
             />
             <div>
               <p className="text-sm font-bold text-custom-blue-950">
-                Online service
-              </p>
-              <p className="text-xs font-normal text-custom-grey-500">
-                Access to multiplayer games
-              </p>
-            </div>
-          </div>
-          <p className="text-xs font-normal text-custom-purple-600">
-            {isYearly ? "+$10/yr" : "+$1/mo"}
-          </p>
-        </div>
-        <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
-          <div className="flex gap-5 items-center">
-            <input
-              type="checkbox"
-              name="add-on-options"
-              className="w-4 h-4 accent-custom-purple-600 cursor-pointer"
-            />
-            <div>
-              <p className="text-sm font-bold text-custom-blue-950">
                 Larger storage
               </p>
               <p className="text-xs font-normal text-custom-grey-500">
