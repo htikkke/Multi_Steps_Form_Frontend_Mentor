@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FormContext } from "./App";
+import { FormContext } from "../App";
 
 export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
   const { isYearly } = useContext(FormContext);

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import PlanCard from "./PlanCard";
-import { FormContext } from "./App";
+import PlanCard from "../side-components/PlanCard";
+import { FormContext } from "../App";
 
 const PLANS = [
   {

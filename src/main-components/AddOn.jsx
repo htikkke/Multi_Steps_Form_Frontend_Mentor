@@ -1,4 +1,4 @@
-import AddOnCard from "./AddOnCard";
+import AddOnCard from "../side-components/AddOnCard";
 
 const ADDONS = [
   {
