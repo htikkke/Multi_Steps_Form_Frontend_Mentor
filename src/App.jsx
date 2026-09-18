@@ -3,6 +3,7 @@ import SideBar from "./main-components/SideBar";
 import PersonalInfo from "./main-components/PersonalInfo";
 import SelectPlan from "./main-components/SelectPlan";
 import AddOn from "./main-components/AddOn";
+import FinishingUp from "./main-components/FinishingUp";
 
 export const FormContext = createContext();
 
@@ -16,7 +17,7 @@ export default function App() {
         className="w-full max-w-4xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
       >
         <SideBar />
-        <AddOn />
+        <FinishingUp />
       </div>
     </FormContext.Provider>
   );
