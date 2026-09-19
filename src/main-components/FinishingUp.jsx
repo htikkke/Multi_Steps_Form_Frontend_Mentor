@@ -1,3 +1,55 @@
 export default function FinishingUp() {
-  return <div></div>;
+  return (
+    <div className="rounded-2xl p-8 w-full flex flex-col gap-5">
+      {/* Finishing-Up-Header */}
+      <div>
+        <h1 className="font-bold text-custom-blue-950 text-2xl">
+          Finishing up
+        </h1>
+        <p className="font-normal text-custom-grey-500 text-xs">
+          Double-check everything looks OK before confirming.
+        </p>
+      </div>
+      {/* Check-up-Section */}
+      <div className="bg-slate-50 p-4 rounded-lg flex flex-col gap-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-custom-blue-950 font-bold text-[15px]">
+              Arcade (Monthly)
+            </p>
+            <a
+              href="#"
+              className="text-custom-grey-500 text-xs underline -mt-5"
+            >
+              Change
+            </a>
+          </div>
+          <p className="text-custom-blue-950 text-sm font-bold">$9/mo</p>
+        </div>
+        <div className="bg-custom-grey-500/50 h-0.5"></div>
+        <div className="flex items-center justify-between">
+          <p className="text-custom-grey-500 text-sm">Online Service</p>
+          <p className="text-custom-blue-950/80 text-sm font-bold">+$1/mo</p>
+        </div>
+        <div className="flex items-center justify-between">
+          <p className="text-custom-grey-500 text-sm">Large Storage</p>
+          <p className="text-custom-blue-950/80 text-sm font-bold">+$2/mo</p>
+        </div>
+      </div>
+      {/* Total-session */}
+      <div className="flex items-center justify-between p-4">
+        <p className="text-custom-grey-500 text-sm">Total (per month)</p>
+        <p className="text-custom-purple-600 text-base font-bold">+$12/mo</p>
+      </div>
+      {/* Back-Confirm-button */}
+      <div className="flex justify-between mt-30">
+        <button className="rounded-lg text-custom-grey-500 ext-sm font-bold">
+          Go Back
+        </button>
+        <button className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm font-bold">
+          Confirm
+        </button>
+      </div>
+    </div>
+  );
 }
