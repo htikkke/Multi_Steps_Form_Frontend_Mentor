@@ -31,6 +31,7 @@ export default function App() {
         className="w-full max-w-4xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
       >
         <SideBar />
+        <div id="hero-container">{renderStep()}</div>
       </div>
     </FormContext.Provider>
   );
