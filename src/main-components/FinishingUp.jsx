@@ -1,6 +1,6 @@
 export default function FinishingUp() {
   return (
-    <div className="rounded-2xl p-8 w-full flex flex-col gap-5">
+    <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Finishing-Up-Header */}
       <div>
         <h1 className="font-bold text-custom-blue-950 text-2xl">
@@ -42,11 +42,11 @@ export default function FinishingUp() {
         <p className="text-custom-purple-600 text-base font-bold">+$12/mo</p>
       </div>
       {/* Back-Confirm-button */}
-      <div className="flex justify-between mt-30">
+      <div className="flex justify-between mt-20">
         <button className="rounded-lg text-custom-grey-500 ext-sm font-bold">
           Go Back
         </button>
-        <button className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm font-bold">
+        <button className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm">
           Confirm
         </button>
       </div>

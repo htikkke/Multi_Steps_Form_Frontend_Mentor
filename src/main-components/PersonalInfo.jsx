@@ -1,6 +1,6 @@
 export default function PersonalInfo() {
   return (
-    <div className="rounded-2xl p-8 w-full flex flex-col gap-5">
+    <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Personal-Info-Header */}
       <div className="flex flex-col gap-1">
         <h1 className="font-bold text-custom-blue-950 text-2xl">

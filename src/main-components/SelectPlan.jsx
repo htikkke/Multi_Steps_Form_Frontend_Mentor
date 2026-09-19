@@ -72,7 +72,7 @@ export default function SelectPlan() {
         <button className="rounded-lg text-custom-grey-500 ext-sm font-bold">
           Go Back
         </button>
-        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm font-bold">
+        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm">
           Next Step
         </button>
       </div>

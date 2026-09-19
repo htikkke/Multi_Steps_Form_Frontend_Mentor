@@ -30,7 +30,7 @@ export default function App() {
     >
       <div
         id="main-container"
-        className="w-full max-w-4xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
+        className="w-full max-w-4xl h-142 bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
       >
         <SideBar />
         <div

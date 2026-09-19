@@ -49,11 +49,11 @@ export default function AddOn() {
         ))}
       </div>
       {/* Back-Next-Buttons */}
-      <div className="flex justify-between mt-30">
+      <div className="flex justify-between mt-25">
         <button className="rounded-lg text-custom-grey-500 text-sm font-bold">
           Go Back
         </button>
-        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm font-bold">
+        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm">
           Next Step
         </button>
       </div>
