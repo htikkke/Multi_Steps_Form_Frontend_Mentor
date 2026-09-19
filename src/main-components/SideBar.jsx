@@ -1,8 +1,15 @@
+import { useContext } from "react";
+import { FormContext } from "../App";
+
 export default function SideBar() {
+  const { currentStep, setCurrentStep } = useContext(FormContext);
   return (
     <div className="bg-[url(/assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl">
       {/* Step-1 */}
-      <div className="flex gap-5 items-center">
+      <div
+        onClick={() => setCurrentStep(1)}
+        className="flex gap-5 items-center"
+      >
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           1
         </p>
@@ -16,7 +23,10 @@ export default function SideBar() {
         </div>
       </div>
       {/* Step-2 */}
-      <div className="flex gap-5 items-center">
+      <div
+        onClick={() => setCurrentStep(2)}
+        className="flex gap-5 items-center"
+      >
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           2
         </p>
@@ -30,7 +40,10 @@ export default function SideBar() {
         </div>
       </div>
       {/* Step-3 */}
-      <div className="flex gap-5 items-center">
+      <div
+        onClick={() => setCurrentStep(3)}
+        className="flex gap-5 items-center"
+      >
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           3
         </p>
@@ -44,7 +57,10 @@ export default function SideBar() {
         </div>
       </div>
       {/* Step-4 */}
-      <div className="flex gap-5 items-center">
+      <div
+        onClick={() => setCurrentStep(4)}
+        className="flex gap-5 items-center"
+      >
         <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
           4
         </p>

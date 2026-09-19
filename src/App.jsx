@@ -25,7 +25,9 @@ export default function App() {
   };
 
   return (
-    <FormContext.Provider value={{ isYearly, setIsYearly }}>
+    <FormContext.Provider
+      value={{ isYearly, setIsYearly, currentStep, setCurrentStep }}
+    >
       <div
         id="main-container"
         className="w-full max-w-4xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
