@@ -9,6 +9,7 @@ export const FormContext = createContext();
 
 export default function App() {
   const [isYearly, setIsYearly] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
 
   return (
     <FormContext.Provider value={{ isYearly, setIsYearly }}>
