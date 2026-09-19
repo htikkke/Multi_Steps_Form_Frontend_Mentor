@@ -11,6 +11,19 @@ export default function App() {
   const [isYearly, setIsYearly] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
 
+  const renderStep = () => {
+    switch (currentStep) {
+      case 1:
+        return <PersonalInfo />;
+      case 2:
+        return <SelectPlan />;
+      case 3:
+        return <AddOn />;
+      case 4:
+        return <FinishingUp />;
+    }
+  };
+
   return (
     <FormContext.Provider value={{ isYearly, setIsYearly }}>
       <div
@@ -18,7 +31,6 @@ export default function App() {
         className="w-full max-w-4xl bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
       >
         <SideBar />
-        <FinishingUp />
       </div>
     </FormContext.Provider>
   );
