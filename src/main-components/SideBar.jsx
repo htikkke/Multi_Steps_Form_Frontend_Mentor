@@ -8,9 +8,11 @@ export default function SideBar() {
       {/* Step-1 */}
       <div
         onClick={() => setCurrentStep(1)}
-        className="flex gap-5 items-center"
+        className="flex gap-5 items-center group cursor-pointer"
       >
-        <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
+        <p
+          className={`w-8 h-8 rounded-full border border-white ${currentStep === 1 ? "text-black bg-custom-blue-200" : "text-white"} flex items-center justify-center text-sm`}
+        >
           1
         </p>
         <div className="flex flex-col">
@@ -25,9 +27,11 @@ export default function SideBar() {
       {/* Step-2 */}
       <div
         onClick={() => setCurrentStep(2)}
-        className="flex gap-5 items-center"
+        className="flex gap-5 items-center group cursor-pointer"
       >
-        <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
+        <p
+          className={`w-8 h-8 rounded-full border border-white ${currentStep === 2 ? "text-black bg-custom-blue-200" : "text-white"} flex items-center justify-center text-sm`}
+        >
           2
         </p>
         <div className="flex flex-col">
@@ -42,9 +46,11 @@ export default function SideBar() {
       {/* Step-3 */}
       <div
         onClick={() => setCurrentStep(3)}
-        className="flex gap-5 items-center"
+        className="flex gap-5 items-center group cursor-pointer"
       >
-        <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
+        <p
+          className={`w-8 h-8 rounded-full border border-white ${currentStep === 3 ? "text-black bg-custom-blue-200" : "text-white"} flex items-center justify-center text-sm`}
+        >
           3
         </p>
         <div className="flex flex-col">
@@ -59,9 +65,11 @@ export default function SideBar() {
       {/* Step-4 */}
       <div
         onClick={() => setCurrentStep(4)}
-        className="flex gap-5 items-center"
+        className="flex gap-5 items-center group cursor-pointer"
       >
-        <p className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center text-sm">
+        <p
+          className={`w-8 h-8 rounded-full border border-white ${currentStep === 4 ? "text-black bg-custom-blue-200" : "text-white"} flex items-center justify-center text-sm`}
+        >
           4
         </p>
         <div className="flex flex-col">
