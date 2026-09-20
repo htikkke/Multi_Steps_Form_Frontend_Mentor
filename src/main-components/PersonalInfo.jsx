@@ -18,31 +18,53 @@ export default function PersonalInfo() {
       {/* Personal-Info-Input-Section */}
       <div className="flex flex-col gap-5 mt-5">
         <div className="flex flex-col gap-1">
-          <label className="font-bold text-xs text-custom-blue-950">Name</label>
+          <div className="flex items-center justify-between">
+            <label className="font-bold text-xs text-custom-blue-950">
+              Name
+            </label>
+            {/* error */}
+            <label className="font-bold text-xs text-custom-red-500">
+              This field is required
+            </label>
+          </div>
           <input
             type="text"
             placeholder=" e.g. Stephen King"
-            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950"
+            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950 cursor-pointer outline-none focus:border focus:border-custom-purple-300"
           />
         </div>
         <div>
-          <label className="font-bold text-xs text-custom-blue-950">
-            Email Address
-          </label>
+          <div className="flex items-center justify-between">
+            <label className="font-bold text-xs text-custom-blue-950">
+              Email Address
+            </label>
+            {/* error */}
+            <label className="font-bold text-xs text-custom-red-500">
+              This field is required
+            </label>
+          </div>
           <input
             type="text"
             placeholder=" e.g. stephenking@lorem.com"
-            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950"
+            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950
+            cursor-pointer outline-none focus:border focus:border-custom-purple-300"
           />
         </div>
         <div>
-          <label className="font-bold text-xs text-custom-blue-950">
-            Phone Number
-          </label>
+          <div className="flex items-center justify-between">
+            <label className="font-bold text-xs text-custom-blue-950">
+              Phone Number
+            </label>
+            {/* error */}
+            <label className="font-bold text-xs text-custom-red-500">
+              This field is required
+            </label>
+          </div>
           <input
             type="text"
             placeholder=" e.g. +1 234 567 890"
-            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950"
+            className="border border-custom-grey-500 p-2.5 w-full rounded-lg text-sm text-custom-blue-950
+            cursor-pointer outline-none focus:border focus:border-custom-purple-300"
           />
         </div>
       </div>
