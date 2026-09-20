@@ -4,12 +4,13 @@ import PersonalInfo from "./main-components/PersonalInfo";
 import SelectPlan from "./main-components/SelectPlan";
 import AddOn from "./main-components/AddOn";
 import FinishingUp from "./main-components/FinishingUp";
+import ThankU from "./main-components/ThankU";
 
 export const FormContext = createContext();
 
 export default function App() {
   const [isYearly, setIsYearly] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(5);
 
   const renderStep = () => {
     switch (currentStep) {
@@ -21,6 +22,8 @@ export default function App() {
         return <AddOn />;
       case 4:
         return <FinishingUp />;
+      case 5:
+        return <ThankU />;
     }
   };
 
