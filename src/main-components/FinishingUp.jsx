@@ -54,7 +54,10 @@ export default function FinishingUp() {
         >
           Go Back
         </button>
-        <button className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer">
+        <button
+          onClick={() => setCurrentStep(5)}
+          className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer"
+        >
           Confirm
         </button>
       </div>
