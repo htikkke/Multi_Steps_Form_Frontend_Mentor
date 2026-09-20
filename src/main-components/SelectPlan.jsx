@@ -27,7 +27,7 @@ const PLANS = [
 ];
 
 export default function SelectPlan() {
-  const { isYearly, setIsYearly } = useContext(FormContext);
+  const { isYearly, setIsYearly, setCurrentStep } = useContext(FormContext);
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Select-Plan-Header */}
@@ -69,10 +69,16 @@ export default function SelectPlan() {
       </div>
       {/* Back-Next-button */}
       <div className="flex justify-between mt-30">
-        <button className="rounded-lg text-custom-grey-500 text-sm font-bold">
+        <button
+          onClick={() => setCurrentStep((currentStep) => currentStep - 1)}
+          className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer"
+        >
           Go Back
         </button>
-        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm">
+        <button
+          onClick={() => setCurrentStep((currentStep) => currentStep + 1)}
+          className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer"
+        >
           Next Step
         </button>
       </div>

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function PersonalInfo() {
-  const { currentStep, setCurrentStep } = useContext(FormContext);
+  const { setCurrentStep } = useContext(FormContext);
 
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
