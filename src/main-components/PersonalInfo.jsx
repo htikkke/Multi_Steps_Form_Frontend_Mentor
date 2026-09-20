@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { FormContext } from "../App";
+
 export default function PersonalInfo() {
+  const { currentStep, setCurrentStep } = useContext(FormContext);
+
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Personal-Info-Header */}
@@ -43,7 +48,10 @@ export default function PersonalInfo() {
       </div>
       {/* Next-Button */}
       <div className="flex justify-end mt-20">
-        <button className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm">
+        <button
+          onClick={() => setCurrentStep((currentStep) => currentStep + 1)}
+          className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer"
+        >
           Next Step
         </button>
       </div>

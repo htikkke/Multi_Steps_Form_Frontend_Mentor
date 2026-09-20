@@ -43,7 +43,7 @@ export default function FinishingUp() {
       </div>
       {/* Back-Confirm-button */}
       <div className="flex justify-between mt-20">
-        <button className="rounded-lg text-custom-grey-500 ext-sm font-bold">
+        <button className="rounded-lg text-custom-grey-500 text-sm font-bold">
           Go Back
         </button>
         <button className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm">
