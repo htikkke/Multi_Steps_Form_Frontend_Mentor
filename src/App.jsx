@@ -32,7 +32,18 @@ export default function App() {
 
   return (
     <FormContext.Provider
-      value={{ isYearly, setIsYearly, currentStep, setCurrentStep }}
+      value={{
+        isYearly,
+        setIsYearly,
+        currentStep,
+        setCurrentStep,
+        name,
+        setName,
+        email,
+        setEmail,
+        number,
+        setNumber,
+      }}
     >
       <div
         id="main-container"
