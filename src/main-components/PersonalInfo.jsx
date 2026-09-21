@@ -1,26 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function PersonalInfo() {
-  const { setCurrentStep, name, setName, email, setEmail, number, setNumber } =
+  const { setName, setEmail, setNumber, errors, handleInput } =
     useContext(FormContext);
-
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    number: false,
-  });
-  const handleInput = () => {
-    const newErrors = {
-      name: !name || name.trim() === "",
-      email: !email || email.trim() === "",
-      number: !number || number.trim() === "",
-    };
-    setErrors(newErrors);
-    if (!newErrors.name && !newErrors.email && !newErrors.number) {
-      setCurrentStep((currentStep) => currentStep + 1);
-    }
-  };
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Personal-Info-Header */}

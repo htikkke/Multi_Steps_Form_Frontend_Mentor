@@ -14,13 +14,27 @@ export default function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    number: false,
+  });
+  const handleInput = () => {
+    const newErrors = {
+      name: !name || name.trim() === "",
+      email: !email || email.trim() === "",
+      number: !number || number.trim() === "",
+    };
+    setErrors(newErrors);
+    if (!newErrors.name && !newErrors.email && !newErrors.number) {
+      setCurrentStep((currentStep) => currentStep + 1);
+    }
+  };
 
   const renderStep = () => {
     switch (currentStep) {
       case 1:
         return <PersonalInfo />;
-      case 2:
-        return <SelectPlan />;
       case 3:
         return <AddOn />;
       case 4:
@@ -43,6 +57,9 @@ export default function App() {
         setEmail,
         number,
         setNumber,
+        errors,
+        setErrors,
+        handleInput,
       }}
     >
       <div
