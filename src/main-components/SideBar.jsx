@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function SideBar() {
-  const { currentStep, setCurrentStep } = useContext(FormContext);
+  const { currentStep, setCurrentStep, handleInput } = useContext(FormContext);
   return (
     <div className="bg-[url(/assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl">
       {/* Step-1 */}
@@ -26,7 +26,11 @@ export default function SideBar() {
       </div>
       {/* Step-2 */}
       <div
-        onClick={() => setCurrentStep(2)}
+        onClick={() =>
+          handleInput()
+            ? setCurrentStep((prev) => prev + 1)
+            : setCurrentStep((prev) => prev)
+        }
         className="flex gap-5 items-center group cursor-pointer"
       >
         <p

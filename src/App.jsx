@@ -35,6 +35,8 @@ export default function App() {
     switch (currentStep) {
       case 1:
         return <PersonalInfo />;
+      case 2:
+        return handleInput ? <SelectPlan /> : null;
       case 3:
         return <AddOn />;
       case 4:
