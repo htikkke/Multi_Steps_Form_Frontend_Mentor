@@ -2,8 +2,16 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function PersonalInfo() {
-  const { setName, setEmail, setNumber, errors, handleInput } =
-    useContext(FormContext);
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    number,
+    setNumber,
+    errors,
+    handleInput,
+  } = useContext(FormContext);
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Personal-Info-Header */}
@@ -32,6 +40,7 @@ export default function PersonalInfo() {
           </div>
           <input
             onChange={(e) => setName(e.target.value)}
+            value={name}
             type="text"
             placeholder=" e.g. Stephen King"
             className={`border ${errors.name ? "border-custom-red-500" : "border-custom-grey-500"} p-2.5 w-full rounded-lg text-sm text-custom-blue-950 cursor-pointer outline-none focus:border focus:border-custom-purple-300`}
@@ -52,6 +61,7 @@ export default function PersonalInfo() {
           </div>
           <input
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
             type="text"
             placeholder=" e.g. stephenking@lorem.com"
             className={`border ${errors.email ? "border-custom-red-500" : "border-custom-grey-500"} p-2.5 w-full rounded-lg text-sm text-custom-blue-950 cursor-pointer outline-none focus:border focus:border-custom-purple-300`}
@@ -72,6 +82,7 @@ export default function PersonalInfo() {
           </div>
           <input
             onChange={(e) => setNumber(e.target.value)}
+            value={number}
             type="text"
             placeholder=" e.g. +1 234 567 890"
             className={`border ${errors.number ? "border-custom-red-500" : "border-custom-grey-500"} p-2.5 w-full rounded-lg text-sm text-custom-blue-950 cursor-pointer outline-none focus:border focus:border-custom-purple-300`}
