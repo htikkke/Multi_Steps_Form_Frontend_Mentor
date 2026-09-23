@@ -10,7 +10,7 @@ export const FormContext = createContext();
 
 export default function App() {
   const [isYearly, setIsYearly] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");

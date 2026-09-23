@@ -4,7 +4,7 @@ import { FormContext } from "../App";
 export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
   const { isYearly } = useContext(FormContext);
   return (
-    <div className="w-30 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8">
+    <div className="w-30 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none">
       <img src={icon} alt={title} className="w-8 h-8" />
       <div className="flex flex-col">
         <p className="font-bold text-[15px] text-custom-blue-950">{title}</p>
