@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function FinishingUp() {
-  const { setCurrentStep } = useContext(FormContext);
+  const { setCurrentStep, selectedPlan, isYearly } = useContext(FormContext);
 
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
@@ -20,7 +20,7 @@ export default function FinishingUp() {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-custom-blue-950 font-bold text-[15px]">
-              Arcade (Monthly)
+              {selectedPlan} {isYearly ? "(Yearly)" : "(Monthly)"}
             </p>
             <a
               href="#"
