@@ -16,6 +16,7 @@ export default function App() {
   const [number, setNumber] = useState("");
   const [planType, setPlanType] = useState("");
   const [planfees, setPlanFees] = useState(0);
+  const [selectedPlan, setSelectedPlan] = useState("");
   const [errors, setErrors] = useState({
     name: false,
     email: false,
@@ -67,6 +68,8 @@ export default function App() {
         setPlanType,
         planfees,
         setPlanFees,
+        selectedPlan,
+        setSelectedPlan,
         handleInput,
       }}
     >

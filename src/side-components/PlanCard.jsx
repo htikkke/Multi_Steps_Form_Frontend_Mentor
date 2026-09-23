@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
-  const { isYearly } = useContext(FormContext);
+  const { isYearly,selectedPlan,setSelectedPlan } = useContext(FormContext);
   return (
     <div className="w-30 h-36 border border-custom-grey-500 p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none">
       <img src={icon} alt={title} className="w-8 h-8" />
