@@ -16,7 +16,7 @@ export default function AddOnCard({ title, text, monthlyPrice, yearlyPrice }) {
   };
   return (
     <div
-      className={`flex justify-between items-center px-6 py-4 outline-none border ${pickAddOns.has(title) ? "border-custom-purple-600" : "border-custom-grey-500/50"} rounded-lg`}
+      className={`flex justify-between items-center px-6 py-4 outline-none border ${pickAddOns.has(title) ? "border-custom-purple-600" : "border-custom-grey-500/50"} rounded-lg group hover:border-custom-purple-600 cursor-pointer transition-colors`}
     >
       <div className="flex gap-5 items-center">
         <input
@@ -24,7 +24,7 @@ export default function AddOnCard({ title, text, monthlyPrice, yearlyPrice }) {
           onChange={() => toggleAddOns(title)}
           type="checkbox"
           name="add-on-options"
-          className="w-4 h-4 accent-custom-purple-600 cursor-pointer"
+          className="w-4 h-4 accent-custom-purple-600 cursor-pointer group"
         />
         <div>
           <p className="text-sm font-bold text-custom-blue-950">{title}</p>
