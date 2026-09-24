@@ -17,6 +17,7 @@ export default function App() {
   const [planType, setPlanType] = useState("");
   const [planFees, setPlanFees] = useState(0);
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [pickAddOns, setPickAddOns] = useState([]);
   const [errors, setErrors] = useState({
     name: false,
     email: false,
