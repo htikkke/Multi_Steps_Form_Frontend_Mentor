@@ -40,7 +40,7 @@ export default function App() {
       case 1:
         return <PersonalInfo />;
       case 2:
-        return handleInput ? <SelectPlan /> : null;
+        return <SelectPlan />;
       case 3:
         return <AddOn />;
       case 4:

@@ -51,7 +51,13 @@ export default function SideBar() {
       </div>
       {/* Step-3 */}
       <div
-        onClick={() => setCurrentStep(3)}
+        onClick={() => {
+          if (currentStep === 1) {
+            handleInput();
+          } else {
+            setCurrentStep(3);
+          }
+        }}
         className="flex gap-5 items-center group cursor-pointer"
       >
         <p
@@ -70,7 +76,13 @@ export default function SideBar() {
       </div>
       {/* Step-4 */}
       <div
-        onClick={() => setCurrentStep(4)}
+        onClick={() => {
+          if (currentStep === 1) {
+            handleInput();
+          } else {
+            setCurrentStep(4);
+          }
+        }}
         className="flex gap-5 items-center group cursor-pointer"
       >
         <p
