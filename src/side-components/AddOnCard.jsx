@@ -2,11 +2,15 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function AddOnCard({ title, text, monthlyPrice, yearlyPrice }) {
-  const { isYearly } = useContext(FormContext);
+  const { isYearly, pickAddOns, setPickAddOns } = useContext(FormContext);
   return (
-    <div className="flex justify-between items-center px-6 py-4 border border-custom-grey-500/50 rounded-lg">
+    <div
+      className={`flex justify-between items-center px-6 py-4 outline-none border ${pickAddOns.has(title) ? "border-custom-blue-950" : "border-custom-grey-500/50"} rounded-lg`}
+    >
       <div className="flex gap-5 items-center">
         <input
+          checked={pickAddOns.has(title)}
+          onChange={() => setPickAddOns(title)}
           type="checkbox"
           name="add-on-options"
           className="w-4 h-4 accent-custom-purple-600 cursor-pointer"

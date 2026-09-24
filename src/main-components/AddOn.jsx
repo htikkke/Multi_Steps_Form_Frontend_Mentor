@@ -44,7 +44,7 @@ export default function AddOn() {
       <div className="flex flex-col gap-3">
         {ADDONS.map((ADDON) => (
           <AddOnCard
-            id={ADDON.id}
+            key={ADDON.id}
             title={ADDON.title}
             text={ADDON.text}
             monthlyPrice={ADDON.monthlyPrice}
