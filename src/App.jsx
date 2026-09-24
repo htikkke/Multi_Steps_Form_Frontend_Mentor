@@ -10,12 +10,12 @@ export const FormContext = createContext();
 
 export default function App() {
   const [isYearly, setIsYearly] = useState(false);
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [planType, setPlanType] = useState("");
-  const [planfees, setPlanFees] = useState(0);
+  const [planFees, setPlanFees] = useState(0);
   const [selectedPlan, setSelectedPlan] = useState("");
   const [errors, setErrors] = useState({
     name: false,
@@ -66,7 +66,7 @@ export default function App() {
         setErrors,
         planType,
         setPlanType,
-        planfees,
+        planFees,
         setPlanFees,
         selectedPlan,
         setSelectedPlan,

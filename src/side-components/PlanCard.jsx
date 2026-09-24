@@ -1,12 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FormContext } from "../App";
 
 export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
-  const { isYearly, selectedPlan, setSelectedPlan } = useContext(FormContext);
+  const { isYearly, selectedPlan, setSelectedPlan, setPlanFees } =
+    useContext(FormContext);
   const isSelected = selectedPlan === title;
+  useEffect(() => {
+    if (isSelected) {
+      setPlanFees(isYearly ? yearlyPrice : monthlyPrice);
+    }
+  }, [isYearly, isSelected, monthlyPrice, yearlyPrice, setPlanFees]);
   return (
     <div
-      onClick={() => setSelectedPlan(title)}
+      onClick={() => {
+        setSelectedPlan(title);
+      }}
       className={`w-30 h-36 border ${isSelected ? "border-custom-purple-600" : "border-custom-grey-500"} p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none`}
     >
       <img src={icon} alt={title} className="w-8 h-8" />

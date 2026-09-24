@@ -71,7 +71,7 @@ export default function SelectPlan() {
       <div className="flex justify-between mt-30">
         <button
           onClick={() => setCurrentStep((currentStep) => currentStep - 1)}
-          className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer"
+          className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer hover:text-custom-blue-950 transition-colors"
         >
           Go Back
         </button>

@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { FormContext } from "../App";
 
 export default function FinishingUp() {
-  const { setCurrentStep, selectedPlan, isYearly } = useContext(FormContext);
+  const { setCurrentStep, selectedPlan, isYearly, planFees } =
+    useContext(FormContext);
 
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
@@ -29,7 +30,9 @@ export default function FinishingUp() {
               Change
             </a>
           </div>
-          <p className="text-custom-blue-950 text-sm font-bold">$9/mo</p>
+          <p className="text-custom-blue-950 text-sm font-bold">
+            ${planFees}/{isYearly ? "yr" : "mo"}
+          </p>
         </div>
         <div className="bg-custom-grey-500/50 h-0.5"></div>
         <div className="flex items-center justify-between">
