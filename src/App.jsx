@@ -23,7 +23,7 @@ export default function App() {
     email: false,
     number: false,
   });
-  const handleInput = () => {
+  const handleInput = (nextStep) => {
     const newErrors = {
       name: !name || name.trim() === "",
       email: !email || email.trim() === "",
@@ -31,7 +31,7 @@ export default function App() {
     };
     setErrors(newErrors);
     if (!newErrors.name && !newErrors.email && !newErrors.number) {
-      setCurrentStep((currentStep) => currentStep + 1);
+      setCurrentStep(nextStep);
     }
   };
 
