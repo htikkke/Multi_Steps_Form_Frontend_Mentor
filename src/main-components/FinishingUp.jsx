@@ -3,7 +3,7 @@ import { FormContext } from "../App";
 import { ADDONS } from "../data/ADDONS";
 
 export default function FinishingUp() {
-  const { setCurrentStep, selectedPlan, isYearly, planFees } =
+  const { setCurrentStep, selectedPlan, isYearly, planFees, pickAddOns } =
     useContext(FormContext);
 
   return (
@@ -17,7 +17,7 @@ export default function FinishingUp() {
           Double-check everything looks OK before confirming.
         </p>
       </div>
-      {/* Check-up-Section */}
+      {/* Selected-Plan-Section */}
       <div className="bg-slate-50 p-4 rounded-lg flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div>
@@ -35,15 +35,20 @@ export default function FinishingUp() {
             ${planFees}/{isYearly ? "yr" : "mo"}
           </p>
         </div>
+        {/* Selected add-on services */}
         <div className="bg-custom-grey-500/50 h-0.5"></div>
-        <div className="flex items-center justify-between">
-          <p className="text-custom-grey-500 text-sm">Online Service</p>
-          <p className="text-custom-blue-950/80 text-sm font-bold">+$1/mo</p>
-        </div>
-        <div className="flex items-center justify-between">
-          <p className="text-custom-grey-500 text-sm">Large Storage</p>
-          <p className="text-custom-blue-950/80 text-sm font-bold">+$2/mo</p>
-        </div>
+        {[...pickAddOns].map((selectedAddon) => {
+          const AddOn = ADDONS.find((item) => item.title === selectedAddon);
+          return (
+            <div className="flex items-center justify-between">
+              <p className="text-custom-grey-500 text-sm">{AddOn.title}</p>
+              <p className="text-custom-blue-950/80 text-sm font-bold">
+                +${isYearly ? AddOn.yearlyPrice : AddOn.monthlyPrice}/
+                {isYearly ? "yr" : "mo"}
+              </p>
+            </div>
+          );
+        })}
       </div>
       {/* Total-session */}
       <div className="flex items-center justify-between p-4">
