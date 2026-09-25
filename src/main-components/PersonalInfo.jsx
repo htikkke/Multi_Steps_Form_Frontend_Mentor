@@ -92,7 +92,7 @@ export default function PersonalInfo() {
       {/* Next-Button */}
       <div className="flex justify-end mt-20">
         <button
-          onClick={handleInput(2)}
+          onClick={() => handleInput(2)}
           className="bg-custom-blue-950 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer"
         >
           Next Step

@@ -78,7 +78,7 @@ export default function SideBar() {
       <div
         onClick={() => {
           if (currentStep === 1) {
-            handleInput();
+            handleInput(4);
           } else {
             setCurrentStep(4);
           }
