@@ -26,7 +26,7 @@ export default function FinishingUp() {
             </p>
             <a
               href="#"
-              className="text-custom-grey-500 text-xs underline -mt-5"
+              className="text-custom-grey-500 text-xs underline -mt-5 hover:text-custom-purple-600"
             >
               Change
             </a>
@@ -59,13 +59,14 @@ export default function FinishingUp() {
       <div className="flex justify-between mt-20">
         <button
           onClick={() => setCurrentStep((currentStep) => currentStep - 1)}
-          className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer"
+          className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer
+          hover:text-custom-blue-950"
         >
           Go Back
         </button>
         <button
           onClick={() => setCurrentStep(5)}
-          className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer"
+          className="bg-custom-purple-600 rounded-lg text-custom-white py-2.5 px-5 text-sm cursor-pointer hover:bg-custom-purple-600/70"
         >
           Confirm
         </button>
