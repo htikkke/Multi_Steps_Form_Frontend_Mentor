@@ -32,7 +32,7 @@ export default function AddOnCard({ title, text, monthlyPrice, yearlyPrice }) {
         </div>
       </div>
       <p className="text-xs font-normal text-custom-purple-600">
-        {isYearly ? `${yearlyPrice}` : `${monthlyPrice}`}
+        {isYearly ? `+$${yearlyPrice}/yr` : `+$${monthlyPrice}/mo`}
       </p>
     </div>
   );
