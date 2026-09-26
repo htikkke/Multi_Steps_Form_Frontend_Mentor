@@ -68,8 +68,7 @@ export default function FinishingUp() {
           Total (per {isYearly ? "year" : "month"})
         </p>
         <p className="text-custom-purple-600 text-base font-bold">
-          +${}/
-          {isYearly ? "yr" : "mo"}
+          +${calculateTotal()}/{isYearly ? "yr" : "mo"}
         </p>
       </div>
       {/* Back-Confirm-button */}
