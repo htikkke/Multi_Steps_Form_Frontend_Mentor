@@ -1,10 +1,22 @@
 import { useContext } from "react";
 import { FormContext } from "../App";
 import { ADDONS } from "../data/ADDONS";
+import AddOn from "./AddOn";
 
 export default function FinishingUp() {
   const { setCurrentStep, selectedPlan, isYearly, planFees, pickAddOns } =
     useContext(FormContext);
+
+  const calculateTotal = () => {
+    let total = planFees;
+    [...pickAddOns].forEach((selectedAddOn) => {
+      const addOn = ADDONS.find((item) => item.title === selectedAddOn);
+      if (addOn) {
+        total += isYearly ? addOn.yearlyPrice : addOn.monthlyPrice;
+      }
+    });
+    return total;
+  };
 
   return (
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
@@ -52,8 +64,13 @@ export default function FinishingUp() {
       </div>
       {/* Total-session */}
       <div className="flex items-center justify-between p-4">
-        <p className="text-custom-grey-500 text-sm">Total (per month)</p>
-        <p className="text-custom-purple-600 text-base font-bold">+$12/mo</p>
+        <p className="text-custom-grey-500 text-sm">
+          Total (per {isYearly ? "year" : "month"})
+        </p>
+        <p className="text-custom-purple-600 text-base font-bold">
+          +${}/
+          {isYearly ? "yr" : "mo"}
+        </p>
       </div>
       {/* Back-Confirm-button */}
       <div className="flex justify-between mt-20">
