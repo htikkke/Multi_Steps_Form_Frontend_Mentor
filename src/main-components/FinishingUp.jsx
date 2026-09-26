@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { FormContext } from "../App";
 import { ADDONS } from "../data/ADDONS";
-import AddOn from "./AddOn";
 
 export default function FinishingUp() {
   const { setCurrentStep, selectedPlan, isYearly, planFees, pickAddOns } =
