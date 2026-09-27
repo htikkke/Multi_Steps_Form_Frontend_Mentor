@@ -9,10 +9,10 @@ export default function SelectPlan() {
     <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
       {/* Select-Plan-Header */}
       <div className="flex flex-col gap-1">
-        <h1 className="font-bold text-custom-blue-950 text-2xl">
+        <h1 className="font-bold text-custom-blue-950 text-2xl max-[500px]:text-center">
           Select Your Plan
         </h1>
-        <p className="font-normal text-custom-grey-500 text-xs">
+        <p className="font-normal text-custom-grey-500 text-xs max-[500px]:text-center">
           You have the option of monthly or yearly billing.
         </p>
       </div>
