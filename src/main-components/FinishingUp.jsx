@@ -18,7 +18,7 @@ export default function FinishingUp() {
   };
 
   return (
-    <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
+    <div className="rounded-2xl p-8 w-full flex flex-col gap-8 max-[500px]:p-12">
       {/* Finishing-Up-Header */}
       <div>
         <h1 className="font-bold text-custom-blue-950 text-2xl">
@@ -71,7 +71,7 @@ export default function FinishingUp() {
         </p>
       </div>
       {/* Back-Confirm-button */}
-      <div className="flex justify-between mt-20">
+      <div className="flex justify-between mt-20 max-[500px]:mt-30">
         <button
           onClick={() => setCurrentStep((currentStep) => currentStep - 1)}
           className="rounded-lg text-custom-grey-500 text-sm font-bold cursor-pointer
