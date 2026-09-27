@@ -37,6 +37,7 @@ export default function FinishingUp() {
             </p>
             <a
               href="#"
+              onClick={() => setCurrentStep(2)}
               className="text-custom-grey-500 text-xs underline -mt-5 hover:text-custom-purple-600"
             >
               Change
