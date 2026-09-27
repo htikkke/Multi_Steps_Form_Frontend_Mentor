@@ -10,7 +10,7 @@ export const FormContext = createContext();
 
 export default function App() {
   const [isYearly, setIsYearly] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(5);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -90,7 +90,7 @@ export default function App() {
       </div>
       <div
         id="main-container-mobile"
-        className="hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:justify-start max-[500px]:max-h-screen max-[500px]:p-0"
+        className="hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:max-h-screen max-[500px]:p-0"
       >
         <SideBar />
         <div

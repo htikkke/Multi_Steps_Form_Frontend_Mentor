@@ -1,6 +1,9 @@
 export default function ThankU() {
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center text-center px-18 py-8">
+    <div
+      className="h-full w-full flex flex-col items-center justify-center text-center px-18 py-8
+    max-[500px]:mt-20"
+    >
       <div className="flex flex-col items-center justify-center gap-5 text-center">
         <img src="./assets/images/icon-thank-you.svg" />
         <p className="font-bold text-custom-blue-950 text-2xl">Thank you!</p>
