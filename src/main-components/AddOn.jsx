@@ -7,7 +7,7 @@ export default function AddOn() {
   const { setCurrentStep } = useContext(FormContext);
 
   return (
-    <div className="rounded-2xl p-8 w-full flex flex-col gap-8">
+    <div className="rounded-2xl p-8 w-full flex flex-col gap-8 max-[500px]:p-12 max-[500px]:shadow-2xl">
       {/* Add-On-header */}
       <div className="flex flex-col gap-1">
         <h1 className="font-bold text-custom-blue-950 text-2xl">
