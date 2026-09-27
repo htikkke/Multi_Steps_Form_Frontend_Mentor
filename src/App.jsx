@@ -88,7 +88,18 @@ export default function App() {
           {renderStep()}
         </div>
       </div>
-      <div id="main-container-mobile" className="max-[501px]:hidden"></div>
+      <div
+        id="main-container-mobile"
+        className="hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:justify-start max-[500px]:max-h-screen max-[500px]:p-0"
+      >
+        <SideBar />
+        <div
+          id="hero-container"
+          className="flex-1 transition-all duration-500 ease-in-out transform opacity-100"
+        >
+          {renderStep()}
+        </div>
+      </div>
     </FormContext.Provider>
   );
 }
