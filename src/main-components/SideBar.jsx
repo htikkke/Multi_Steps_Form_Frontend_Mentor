@@ -4,7 +4,7 @@ import { FormContext } from "../App";
 export default function SideBar() {
   const { currentStep, setCurrentStep, handleInput } = useContext(FormContext);
   return (
-    <div className="bg-[url(/assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl">
+    <div className="bg-[url(./assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl">
       {/* Step-1 */}
       <div
         onClick={() => setCurrentStep(1)}
@@ -16,10 +16,10 @@ export default function SideBar() {
           1
         </p>
         <div className="flex flex-col">
-          <p className="text-custom-purple-200 uppercase text-xs font-normal">
+          <p className="text-custom-purple-200 uppercase text-xs font-normal max-[500px]:hidden">
             Step-1
           </p>
-          <p className="text-custom-white uppercase font-bold text-sm tracking-wider">
+          <p className="text-custom-white uppercase font-bold text-sm tracking-wider max-[500px]:hidden">
             Your info
           </p>
         </div>
@@ -41,10 +41,10 @@ export default function SideBar() {
           2
         </p>
         <div className="flex flex-col">
-          <p className="text-custom-purple-200 uppercase text-xs font-normal">
+          <p className="text-custom-purple-200 uppercase text-xs font-normal max-[500px]:hidden">
             Step-2
           </p>
-          <p className="text-custom-white uppercase font-bold text-sm tracking-wider">
+          <p className="text-custom-white uppercase font-bold text-sm tracking-wider max-[500px]:hidden">
             Select Plan
           </p>
         </div>
@@ -66,10 +66,10 @@ export default function SideBar() {
           3
         </p>
         <div className="flex flex-col">
-          <p className="text-custom-purple-200 uppercase text-xs font-normal">
+          <p className="text-custom-purple-200 uppercase text-xs font-normal max-[500px]:hidden">
             Step-3
           </p>
-          <p className="text-custom-white uppercase font-bold text-sm tracking-wider">
+          <p className="text-custom-white uppercase font-bold text-sm tracking-wider max-[500px]:hidden">
             Add-Ons
           </p>
         </div>
@@ -91,10 +91,10 @@ export default function SideBar() {
           4
         </p>
         <div className="flex flex-col">
-          <p className="text-custom-purple-200 uppercase text-xs font-normal">
+          <p className="text-custom-purple-200 uppercase text-xs font-normal max-[500px]:hidden">
             Step-4
           </p>
-          <p className="text-custom-white uppercase font-bold text-sm tracking-wider">
+          <p className="text-custom-white uppercase font-bold text-sm tracking-wider max-[500px]:hidden">
             Summary
           </p>
         </div>

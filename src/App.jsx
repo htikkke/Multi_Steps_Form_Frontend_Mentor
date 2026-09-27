@@ -77,8 +77,8 @@ export default function App() {
       }}
     >
       <div
-        id="main-container"
-        className="w-full max-w-4xl h-142 bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8"
+        id="main-container-desktop"
+        className="w-full max-w-4xl h-142 bg-custom-white rounded-2xl shadow-2xl p-6 flex gap-8 max-[500px]:hidden"
       >
         <SideBar />
         <div
@@ -88,6 +88,7 @@ export default function App() {
           {renderStep()}
         </div>
       </div>
+      <div id="main-container-mobile" className="max-[501px]:hidden"></div>
     </FormContext.Provider>
   );
 }
