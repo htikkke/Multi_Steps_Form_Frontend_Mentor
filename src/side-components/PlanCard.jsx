@@ -11,14 +11,19 @@ export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
     }
   }, [isYearly, isSelected, monthlyPrice, yearlyPrice, setPlanFees]);
   return (
-    <div
-      onClick={() => {
-        setSelectedPlan(title);
-      }}
+    <label
       className={`w-30 h-36 border ${isSelected ? "border-custom-purple-600" : "border-custom-grey-500"} p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none
       max-[400px]:w-25`}
     >
-      <img src={icon} alt={title} className="w-8 h-8" />
+      <input
+        type="radio"
+        name="plan"
+        value={title}
+        checked={isSelected}
+        onChange={() => setSelectedPlan(title)}
+        className="sr-only"
+      />
+      <img src={icon} alt="" className="w-8 h-8" />
       <div className="flex flex-col">
         <p className="font-bold text-[15px] text-custom-blue-950">{title}</p>
         <p className="font-normal text-xs text-custom-grey-500">
@@ -30,6 +35,6 @@ export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
           </p>
         )}
       </div>
-    </div>
+    </label>
   );
 }

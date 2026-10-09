@@ -4,7 +4,7 @@ import { FormContext } from "../App";
 export default function SideBar() {
   const { currentStep, setCurrentStep, handleInput } = useContext(FormContext);
   return (
-    <div className="bg-[url(./assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl max-[500px]:bg-[url(./assets/images/bg-sidebar-mobile.svg)] max-[500px]:flex-row max-[500px]:min-h-50 max-[500px]:items-center max-[500px]:justify-center max-[500px]:p-0">
+    <div className="bg-[url(/assets/images/bg-sidebar-desktop.svg)] bg-center bg-no-repeat p-8 flex flex-col gap-6 min-h-125 min-w-70 rounded-2xl max-[500px]:bg-[url(/assets/images/bg-sidebar-mobile.svg)] max-[500px]:flex-row max-[500px]:min-h-50 max-[500px]:items-center max-[500px]:justify-center max-[500px]:p-0">
       {/* Step-1 */}
       <div
         onClick={() => setCurrentStep(1)}
