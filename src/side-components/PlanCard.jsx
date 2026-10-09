@@ -12,7 +12,7 @@ export default function PlanCard({ icon, title, monthlyPrice, yearlyPrice }) {
   }, [isYearly, isSelected, monthlyPrice, yearlyPrice, setPlanFees]);
   return (
     <label
-      className={`w-30 h-36 border ${isSelected ? "border-custom-purple-600" : "border-custom-grey-500"} p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none
+      className={`w-full lg:w-36 lg:h-40 border ${isSelected ? "border-custom-purple-600" : "border-custom-grey-500"} p-3 rounded-lg flex flex-col items-start gap-8 group cursor-pointer hover:border-custom-purple-600 hover:outline-none
       max-[400px]:w-25`}
     >
       <input
