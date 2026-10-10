@@ -24,13 +24,24 @@ export default function App() {
     number: false,
   });
   const handleInput = (nextStep) => {
-    const newErrors = {
-      name: !name || name.trim() === "",
-      email: !email || email.trim() === "",
-      number: !number || number.trim() === "",
-    };
+    const newErrors = {};
+    // Name Validation
+    if (!name || name.trim() === "") {
+      newErrors.name = "This field is required";
+    }
+    // Email Validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || email.trim() === "") {
+      newErrors.email = "This field is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Invalid email format";
+    }
+    // Phone Number Validation
+    if (!number || number.trim() === "") {
+      newErrors.number = "This field is required";
+    }
     setErrors(newErrors);
-    if (!newErrors.name && !newErrors.email && !newErrors.number) {
+    if (Object.keys(newErrors).length === 0) {
       setCurrentStep(nextStep);
     }
   };
