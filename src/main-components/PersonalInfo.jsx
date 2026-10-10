@@ -34,7 +34,7 @@ export default function PersonalInfo() {
             {/* error */}
             {errors.name && (
               <label className={`font-bold text-xs text-custom-red-500`}>
-                This field is required
+                {errors.name}
               </label>
             )}
           </div>
@@ -61,13 +61,13 @@ export default function PersonalInfo() {
                 id="email-error"
                 className="font-bold text-xs text-custom-red-500"
               >
-                This field is required
+                {errors.email}
               </p>
             )}
           </div>
           <input
             id="email"
-            type="email"
+            type="text"
             autoComplete="email"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
@@ -86,7 +86,7 @@ export default function PersonalInfo() {
             {/* error */}
             {errors.number && (
               <label className="font-bold text-xs text-custom-red-500">
-                This field is required
+                {errors.number}
               </label>
             )}
           </div>
