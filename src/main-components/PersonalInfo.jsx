@@ -49,20 +49,30 @@ export default function PersonalInfo() {
         {/* email-field */}
         <div>
           <div className="flex items-center justify-between">
-            <label className="font-bold text-xs text-custom-blue-950">
+            <label
+              htmlFor="email"
+              className="font-bold text-xs text-custom-blue-950"
+            >
               Email Address
             </label>
             {/* error */}
             {errors.email && (
-              <label className="font-bold text-xs text-custom-red-500">
+              <p
+                id="email-error"
+                className="font-bold text-xs text-custom-red-500"
+              >
                 This field is required
-              </label>
+              </p>
             )}
           </div>
           <input
+            id="email"
+            type="email"
+            autoComplete="email"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "email-error" : undefined}
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            type="text"
             placeholder=" e.g. stephenking@lorem.com"
             className={`border ${errors.email ? "border-custom-red-500" : "border-custom-grey-500"} p-2.5 w-full rounded-lg text-sm text-custom-blue-950 cursor-pointer outline-none focus:border focus:border-custom-purple-300`}
           />

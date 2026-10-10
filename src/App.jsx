@@ -90,7 +90,7 @@ export default function App() {
       </div>
       <div
         id="main-container-mobile"
-        className="hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:max-h-screen max-[500px]:p-0"
+        className="hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:max-h-screen max-[500px]:p-0 max-[500px]:w-full"
       >
         <SideBar />
         <div
